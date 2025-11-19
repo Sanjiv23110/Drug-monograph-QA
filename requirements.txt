@@ -1,0 +1,33 @@
+# PDF Processing
+pdfplumber==0.10.3
+PyMuPDF==1.23.14
+
+# Text Processing and NLP
+spacy==3.7.2
+transformers==4.36.2
+torch==2.1.2
+sentencepiece==0.1.99
+
+# Vector Database and Search
+faiss-cpu==1.7.4
+elasticsearch==8.11.0
+
+# Medical AI Models
+transformers[torch]==4.36.2
+
+# Utilities
+numpy==1.24.3
+pandas==2.0.3
+python-dotenv==1.0.0
+tqdm==4.66.1
+regex==2023.10.3
+
+# API and Interface
+fastapi==0.104.1
+uvicorn==0.24.0
+gradio==4.8.0
+
+# Development
+pytest==7.4.3
+black==23.11.0
+flake8==6.1.0

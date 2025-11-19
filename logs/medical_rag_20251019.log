@@ -1,0 +1,498 @@
+2025-10-19 11:22:21,168 - src.medical_rag_system - INFO - Initializing Medical RAG System
+2025-10-19 11:22:22,005 - embedding_manager - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-19 11:22:24,555 - embedding_manager - INFO - Loaded FAISS index with 4847 vectors
+2025-10-19 11:22:28,625 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:N/A duration:4.069s]
+2025-10-19 11:22:28,625 - elastic_transport.node_pool - WARNING - Node <Urllib3HttpNode(http://localhost:9200)> has failed for 1 times in a row, putting on 1 second timeout
+2025-10-19 11:22:28,625 - elastic_transport.transport - WARNING - Retrying request after failure (attempt 0 of 3)
+Traceback (most recent call last):
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\elastic_transport\_node\_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\util\retry.py", line 445, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "C:\ProgramData\anaconda3\Lib\http\client.py", line 1298, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\ProgramData\anaconda3\Lib\http\client.py", line 1058, in _send_output
+    self.send(msg)
+  File "C:\ProgramData\anaconda3\Lib\http\client.py", line 996, in send
+    self.connect()
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000020C0991BD10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\elastic_transport\_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\elastic_transport\_node\_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x0000020C0991BD10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it)
+2025-10-19 11:22:32,800 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:N/A duration:4.064s]
+2025-10-19 11:22:32,800 - elastic_transport.node_pool - WARNING - Node <Urllib3HttpNode(http://localhost:9200)> has failed for 2 times in a row, putting on 2 second timeout
+2025-10-19 11:22:32,800 - elastic_transport.transport - WARNING - Retrying request after failure (attempt 1 of 3)
+Traceback (most recent call last):
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\elastic_transport\_node\_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\util\retry.py", line 445, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "C:\ProgramData\anaconda3\Lib\http\client.py", line 1298, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\ProgramData\anaconda3\Lib\http\client.py", line 1058, in _send_output
+    self.send(msg)
+  File "C:\ProgramData\anaconda3\Lib\http\client.py", line 996, in send
+    self.connect()
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000020C0995F450>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\elastic_transport\_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\elastic_transport\_node\_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x0000020C0995F450>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it)
+2025-10-19 11:22:32,803 - elastic_transport.node_pool - INFO - Resurrected node <Urllib3HttpNode(http://localhost:9200)> (force=False)
+2025-10-19 11:22:36,867 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:N/A duration:4.064s]
+2025-10-19 11:22:36,867 - elastic_transport.node_pool - WARNING - Node <Urllib3HttpNode(http://localhost:9200)> has failed for 3 times in a row, putting on 4 second timeout
+2025-10-19 11:22:36,867 - elastic_transport.transport - WARNING - Retrying request after failure (attempt 2 of 3)
+Traceback (most recent call last):
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\elastic_transport\_node\_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\util\retry.py", line 445, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "C:\ProgramData\anaconda3\Lib\http\client.py", line 1298, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\ProgramData\anaconda3\Lib\http\client.py", line 1058, in _send_output
+    self.send(msg)
+  File "C:\ProgramData\anaconda3\Lib\http\client.py", line 996, in send
+    self.connect()
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000020C09994210>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\elastic_transport\_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\elastic_transport\_node\_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x0000020C09994210>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it)
+2025-10-19 11:22:36,867 - elastic_transport.node_pool - INFO - Resurrected node <Urllib3HttpNode(http://localhost:9200)> (force=False)
+2025-10-19 11:22:40,933 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:N/A duration:4.066s]
+2025-10-19 11:22:40,937 - elastic_transport.node_pool - WARNING - Node <Urllib3HttpNode(http://localhost:9200)> has failed for 4 times in a row, putting on 8 second timeout
+2025-10-19 11:22:40,937 - elasticsearch_manager - ERROR - ElasticSearch connection test failed: Connection error caused by: ConnectionError(Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x0000020C0991BD10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it))
+2025-10-19 11:22:40,939 - elasticsearch_manager - INFO - Connected to ElasticSearch at localhost:9200
+2025-10-19 11:22:40,939 - rag_pipeline - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-19 11:22:42,749 - rag_pipeline - INFO - PubMedBERT model loaded successfully
+2025-10-19 11:22:42,750 - rag_pipeline - INFO - Loading QA model: ktrapeznikov/biobert_v1.1_pubmed_squad_v2
+2025-10-19 11:22:43,908 - rag_pipeline - INFO - QA model loaded successfully
+2025-10-19 11:22:43,908 - src.medical_rag_system - INFO - Medical RAG System initialized successfully
+2025-10-19 11:22:43,908 - src.medical_rag_system - INFO - Answering question: What is gravol used for?
+2025-10-19 11:22:43,908 - src.medical_rag_system - INFO - Searching for: What is gravol used for?
+2025-10-19 11:22:43,908 - embedding_manager - INFO - Generating embeddings for 1 texts
+2025-10-19 11:22:44,387 - elasticsearch_manager - ERROR - ElasticSearch client not available
+2025-10-19 11:22:44,387 - elasticsearch_manager - ERROR - ElasticSearch client not available
+2025-10-19 11:22:44,387 - rag_pipeline - INFO - Answering question: What is gravol used for?
+2025-10-19 11:22:44,390 - rag_pipeline - INFO - Question type detection - Contra: False, MOA: False, Indication: True, Dosage: False, Side effects: False, Interactions: False, Storage: False, General: False
+2025-10-19 11:24:42,611 - src.medical_rag_system - INFO - Initializing Medical RAG System
+2025-10-19 11:24:43,020 - embedding_manager - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-19 11:24:45,080 - embedding_manager - INFO - Loaded FAISS index with 4847 vectors
+2025-10-19 11:24:49,140 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:N/A duration:4.060s]
+2025-10-19 11:24:49,140 - elastic_transport.node_pool - WARNING - Node <Urllib3HttpNode(http://localhost:9200)> has failed for 1 times in a row, putting on 1 second timeout
+2025-10-19 11:24:49,140 - elastic_transport.transport - WARNING - Retrying request after failure (attempt 0 of 3)
+Traceback (most recent call last):
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\elastic_transport\_node\_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\util\retry.py", line 445, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "C:\ProgramData\anaconda3\Lib\http\client.py", line 1298, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\ProgramData\anaconda3\Lib\http\client.py", line 1058, in _send_output
+    self.send(msg)
+  File "C:\ProgramData\anaconda3\Lib\http\client.py", line 996, in send
+    self.connect()
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000020B80893750>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\elastic_transport\_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\elastic_transport\_node\_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x0000020B80893750>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it)
+2025-10-19 11:24:53,207 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:N/A duration:4.066s]
+2025-10-19 11:24:53,207 - elastic_transport.node_pool - WARNING - Node <Urllib3HttpNode(http://localhost:9200)> has failed for 2 times in a row, putting on 2 second timeout
+2025-10-19 11:24:53,207 - elastic_transport.transport - WARNING - Retrying request after failure (attempt 1 of 3)
+Traceback (most recent call last):
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\elastic_transport\_node\_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\util\retry.py", line 445, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "C:\ProgramData\anaconda3\Lib\http\client.py", line 1298, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\ProgramData\anaconda3\Lib\http\client.py", line 1058, in _send_output
+    self.send(msg)
+  File "C:\ProgramData\anaconda3\Lib\http\client.py", line 996, in send
+    self.connect()
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000020B86603350>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\elastic_transport\_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\elastic_transport\_node\_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x0000020B86603350>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it)
+2025-10-19 11:24:53,209 - elastic_transport.node_pool - INFO - Resurrected node <Urllib3HttpNode(http://localhost:9200)> (force=False)
+2025-10-19 11:24:57,273 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:N/A duration:4.064s]
+2025-10-19 11:24:57,273 - elastic_transport.node_pool - WARNING - Node <Urllib3HttpNode(http://localhost:9200)> has failed for 3 times in a row, putting on 4 second timeout
+2025-10-19 11:24:57,273 - elastic_transport.transport - WARNING - Retrying request after failure (attempt 2 of 3)
+Traceback (most recent call last):
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\elastic_transport\_node\_http_urllib3.py", line 167, in perform_request
+    response = self.pool.urlopen(
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\util\retry.py", line 445, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\connectionpool.py", line 496, in _make_request
+    conn.request(
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\connection.py", line 395, in request
+    self.endheaders()
+  File "C:\ProgramData\anaconda3\Lib\http\client.py", line 1298, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\ProgramData\anaconda3\Lib\http\client.py", line 1058, in _send_output
+    self.send(msg)
+  File "C:\ProgramData\anaconda3\Lib\http\client.py", line 996, in send
+    self.connect()
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\connection.py", line 243, in connect
+    self.sock = self._new_conn()
+                ^^^^^^^^^^^^^^^^
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\urllib3\connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000020B86634110>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\elastic_transport\_transport.py", line 342, in perform_request
+    resp = node.perform_request(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sanji\AppData\Roaming\Python\Python311\site-packages\elastic_transport\_node\_http_urllib3.py", line 202, in perform_request
+    raise err from e
+elastic_transport.ConnectionError: Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x0000020B86634110>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it)
+2025-10-19 11:24:57,273 - elastic_transport.node_pool - INFO - Resurrected node <Urllib3HttpNode(http://localhost:9200)> (force=False)
+2025-10-19 11:25:01,338 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:N/A duration:4.065s]
+2025-10-19 11:25:01,339 - elastic_transport.node_pool - WARNING - Node <Urllib3HttpNode(http://localhost:9200)> has failed for 4 times in a row, putting on 8 second timeout
+2025-10-19 11:25:01,339 - elasticsearch_manager - ERROR - ElasticSearch connection test failed: Connection error caused by: ConnectionError(Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x0000020B80893750>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it))
+2025-10-19 11:25:01,339 - elasticsearch_manager - INFO - Connected to ElasticSearch at localhost:9200
+2025-10-19 11:25:01,339 - rag_pipeline - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-19 11:25:03,600 - rag_pipeline - INFO - PubMedBERT model loaded successfully
+2025-10-19 11:25:03,600 - rag_pipeline - INFO - Loading QA model: ktrapeznikov/biobert_v1.1_pubmed_squad_v2
+2025-10-19 11:25:04,545 - rag_pipeline - INFO - QA model loaded successfully
+2025-10-19 11:25:04,545 - src.medical_rag_system - INFO - Medical RAG System initialized successfully
+2025-10-19 11:25:04,545 - src.medical_rag_system - INFO - Answering question: what are the CONTRAINDICATIONS for gravol?
+2025-10-19 11:25:04,545 - src.medical_rag_system - INFO - Searching for: what are the CONTRAINDICATIONS for gravol?
+2025-10-19 11:25:04,545 - embedding_manager - INFO - Generating embeddings for 1 texts
+2025-10-19 11:25:05,085 - elasticsearch_manager - ERROR - ElasticSearch client not available
+2025-10-19 11:25:05,086 - elasticsearch_manager - ERROR - ElasticSearch client not available
+2025-10-19 11:25:05,087 - rag_pipeline - INFO - Answering question: what are the CONTRAINDICATIONS for gravol?
+2025-10-19 11:25:05,093 - rag_pipeline - INFO - Question type detection - Contra: True, MOA: False, Indication: True, Dosage: False, Side effects: False, Interactions: False, Storage: False, General: False
+2025-10-19 11:25:48,603 - src.medical_rag_system - INFO - Initializing Medical RAG System
+2025-10-19 11:25:49,453 - embedding_manager - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-19 11:25:51,893 - embedding_manager - INFO - Loaded FAISS index with 4847 vectors
+2025-10-19 11:25:51,976 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.081s]
+2025-10-19 11:25:51,976 - elasticsearch_manager - INFO - ElasticSearch cluster: docker-cluster
+2025-10-19 11:25:51,979 - elasticsearch_manager - INFO - Connected to ElasticSearch at localhost:9200
+2025-10-19 11:25:51,979 - rag_pipeline - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-19 11:25:53,983 - rag_pipeline - INFO - PubMedBERT model loaded successfully
+2025-10-19 11:25:53,983 - rag_pipeline - INFO - Loading QA model: ktrapeznikov/biobert_v1.1_pubmed_squad_v2
+2025-10-19 11:25:54,931 - rag_pipeline - INFO - QA model loaded successfully
+2025-10-19 11:25:54,931 - src.medical_rag_system - INFO - Medical RAG System initialized successfully
+2025-10-19 11:25:54,932 - src.medical_rag_system - INFO - Answering question: what are the CONTRAINDICATIONS for gravol?
+2025-10-19 11:25:54,932 - src.medical_rag_system - INFO - Searching for: what are the CONTRAINDICATIONS for gravol?
+2025-10-19 11:25:54,932 - embedding_manager - INFO - Generating embeddings for 1 texts
+2025-10-19 11:25:55,916 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.599s]
+2025-10-19 11:25:55,916 - elasticsearch_manager - INFO - Found 20 results for query: what are the CONTRAINDICATIONS for gravol?
+2025-10-19 11:25:56,115 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.199s]
+2025-10-19 11:25:56,116 - elasticsearch_manager - INFO - Found 10 results for query: what are the CONTRAINDICATIONS for gravol?
+2025-10-19 11:25:56,116 - rag_pipeline - INFO - Answering question: what are the CONTRAINDICATIONS for gravol?
+2025-10-19 11:25:56,119 - rag_pipeline - INFO - Question type detection - Contra: True, MOA: False, Indication: True, Dosage: False, Side effects: False, Interactions: False, Storage: False, General: False
+2025-10-19 11:34:06,877 - src.medical_rag_system - INFO - Initializing Medical RAG System
+2025-10-19 11:34:07,725 - embedding_manager - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-19 11:34:10,463 - embedding_manager - INFO - Loaded FAISS index with 4847 vectors
+2025-10-19 11:34:10,478 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.013s]
+2025-10-19 11:34:10,478 - elasticsearch_manager - INFO - ElasticSearch cluster: docker-cluster
+2025-10-19 11:34:10,478 - elasticsearch_manager - INFO - Connected to ElasticSearch at localhost:9200
+2025-10-19 11:34:10,478 - rag_pipeline - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-19 11:34:12,601 - rag_pipeline - INFO - PubMedBERT model loaded successfully
+2025-10-19 11:34:12,601 - rag_pipeline - INFO - Loading QA model: ktrapeznikov/biobert_v1.1_pubmed_squad_v2
+2025-10-19 11:34:14,032 - rag_pipeline - INFO - QA model loaded successfully
+2025-10-19 11:34:14,032 - src.medical_rag_system - INFO - Medical RAG System initialized successfully
+2025-10-19 11:34:14,035 - src.medical_rag_system - INFO - Answering question: What is gravol used for?
+2025-10-19 11:34:14,036 - src.medical_rag_system - INFO - Searching for: What is gravol used for?
+2025-10-19 11:34:14,036 - embedding_manager - INFO - Generating embeddings for 1 texts
+2025-10-19 11:34:15,352 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.182s]
+2025-10-19 11:34:15,352 - elasticsearch_manager - INFO - Found 20 results for query: What is gravol used for?
+2025-10-19 11:34:15,462 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.111s]
+2025-10-19 11:34:15,462 - elasticsearch_manager - INFO - Found 10 results for query: What is gravol used for?
+2025-10-19 11:34:15,462 - rag_pipeline - INFO - Answering question: What is gravol used for?
+2025-10-19 11:34:15,473 - rag_pipeline - INFO - Question type detection - Contra: False, MOA: False, Indication: True, Dosage: False, Side effects: False, Interactions: False, Storage: False, General: False
+2025-10-19 11:35:07,855 - src.medical_rag_system - INFO - Initializing Medical RAG System
+2025-10-19 11:35:08,293 - embedding_manager - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-19 11:35:10,748 - embedding_manager - INFO - Loaded FAISS index with 4847 vectors
+2025-10-19 11:35:10,780 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.020s]
+2025-10-19 11:35:10,780 - elasticsearch_manager - INFO - ElasticSearch cluster: docker-cluster
+2025-10-19 11:35:10,780 - elasticsearch_manager - INFO - Connected to ElasticSearch at localhost:9200
+2025-10-19 11:35:10,780 - rag_pipeline - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-19 11:35:12,790 - rag_pipeline - INFO - PubMedBERT model loaded successfully
+2025-10-19 11:35:12,790 - rag_pipeline - INFO - Loading QA model: ktrapeznikov/biobert_v1.1_pubmed_squad_v2
+2025-10-19 11:35:13,994 - rag_pipeline - INFO - QA model loaded successfully
+2025-10-19 11:35:13,994 - src.medical_rag_system - INFO - Medical RAG System initialized successfully
+2025-10-19 11:35:13,994 - src.medical_rag_system - INFO - Answering question: What is gravol used for in detail ?
+2025-10-19 11:35:13,994 - src.medical_rag_system - INFO - Searching for: What is gravol used for in detail ?
+2025-10-19 11:35:13,994 - embedding_manager - INFO - Generating embeddings for 1 texts
+2025-10-19 11:35:14,715 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.275s]
+2025-10-19 11:35:14,716 - elasticsearch_manager - INFO - Found 20 results for query: What is gravol used for in detail ?
+2025-10-19 11:35:14,847 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.131s]
+2025-10-19 11:35:14,849 - elasticsearch_manager - INFO - Found 10 results for query: What is gravol used for in detail ?
+2025-10-19 11:35:14,849 - rag_pipeline - INFO - Answering question: What is gravol used for in detail ?
+2025-10-19 11:35:14,852 - rag_pipeline - INFO - Question type detection - Contra: False, MOA: False, Indication: True, Dosage: False, Side effects: False, Interactions: False, Storage: False, General: False
+2025-10-19 11:35:48,003 - src.medical_rag_system - INFO - Initializing Medical RAG System
+2025-10-19 11:35:48,456 - embedding_manager - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-19 11:35:50,833 - embedding_manager - INFO - Loaded FAISS index with 4847 vectors
+2025-10-19 11:35:50,842 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.009s]
+2025-10-19 11:35:50,844 - elasticsearch_manager - INFO - ElasticSearch cluster: docker-cluster
+2025-10-19 11:35:50,844 - elasticsearch_manager - INFO - Connected to ElasticSearch at localhost:9200
+2025-10-19 11:35:50,844 - rag_pipeline - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-19 11:35:52,857 - rag_pipeline - INFO - PubMedBERT model loaded successfully
+2025-10-19 11:35:52,857 - rag_pipeline - INFO - Loading QA model: ktrapeznikov/biobert_v1.1_pubmed_squad_v2
+2025-10-19 11:35:53,705 - rag_pipeline - INFO - QA model loaded successfully
+2025-10-19 11:35:53,705 - src.medical_rag_system - INFO - Medical RAG System initialized successfully
+2025-10-19 11:35:53,705 - src.medical_rag_system - INFO - Answering question: how does gravol work?
+2025-10-19 11:35:53,705 - src.medical_rag_system - INFO - Searching for: how does gravol work?
+2025-10-19 11:35:53,705 - embedding_manager - INFO - Generating embeddings for 1 texts
+2025-10-19 11:35:54,211 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.198s]
+2025-10-19 11:35:54,211 - elasticsearch_manager - INFO - Found 20 results for query: how does gravol work?
+2025-10-19 11:35:54,296 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.085s]
+2025-10-19 11:35:54,296 - elasticsearch_manager - INFO - Found 10 results for query: how does gravol work?
+2025-10-19 11:35:54,296 - rag_pipeline - INFO - Answering question: how does gravol work?
+2025-10-19 11:35:54,299 - rag_pipeline - INFO - Question type detection - Contra: False, MOA: True, Indication: False, Dosage: False, Side effects: False, Interactions: False, Storage: False, General: False
+2025-10-19 11:36:42,038 - src.medical_rag_system - INFO - Initializing Medical RAG System
+2025-10-19 11:36:42,459 - embedding_manager - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-19 11:36:44,567 - embedding_manager - INFO - Loaded FAISS index with 4847 vectors
+2025-10-19 11:36:44,576 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.009s]
+2025-10-19 11:36:44,577 - elasticsearch_manager - INFO - ElasticSearch cluster: docker-cluster
+2025-10-19 11:36:44,577 - elasticsearch_manager - INFO - Connected to ElasticSearch at localhost:9200
+2025-10-19 11:36:44,577 - rag_pipeline - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-19 11:36:46,553 - rag_pipeline - INFO - PubMedBERT model loaded successfully
+2025-10-19 11:36:46,553 - rag_pipeline - INFO - Loading QA model: ktrapeznikov/biobert_v1.1_pubmed_squad_v2
+2025-10-19 11:36:47,366 - rag_pipeline - INFO - QA model loaded successfully
+2025-10-19 11:36:47,366 - src.medical_rag_system - INFO - Medical RAG System initialized successfully
+2025-10-19 11:36:47,366 - src.medical_rag_system - INFO - Answering question: give me all warning and precautions for gravol
+2025-10-19 11:36:47,366 - src.medical_rag_system - INFO - Searching for: give me all warning and precautions for gravol
+2025-10-19 11:36:47,368 - embedding_manager - INFO - Generating embeddings for 1 texts
+2025-10-19 11:36:48,002 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.333s]
+2025-10-19 11:36:48,002 - elasticsearch_manager - INFO - Found 20 results for query: give me all warning and precautions for gravol
+2025-10-19 11:36:48,159 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.158s]
+2025-10-19 11:36:48,159 - elasticsearch_manager - INFO - Found 10 results for query: give me all warning and precautions for gravol
+2025-10-19 11:36:48,159 - rag_pipeline - INFO - Answering question: give me all warning and precautions for gravol
+2025-10-19 11:36:48,163 - rag_pipeline - INFO - Question type detection - Contra: True, MOA: False, Indication: False, Dosage: False, Side effects: False, Interactions: False, Storage: False, General: False
+2025-10-19 11:37:48,053 - src.medical_rag_system - INFO - Initializing Medical RAG System
+2025-10-19 11:37:48,463 - embedding_manager - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-19 11:37:50,526 - embedding_manager - INFO - Loaded FAISS index with 4847 vectors
+2025-10-19 11:37:50,543 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.016s]
+2025-10-19 11:37:50,543 - elasticsearch_manager - INFO - ElasticSearch cluster: docker-cluster
+2025-10-19 11:37:50,544 - elasticsearch_manager - INFO - Connected to ElasticSearch at localhost:9200
+2025-10-19 11:37:50,544 - rag_pipeline - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-19 11:37:52,481 - rag_pipeline - INFO - PubMedBERT model loaded successfully
+2025-10-19 11:37:52,482 - rag_pipeline - INFO - Loading QA model: ktrapeznikov/biobert_v1.1_pubmed_squad_v2
+2025-10-19 11:37:53,699 - rag_pipeline - INFO - QA model loaded successfully
+2025-10-19 11:37:53,699 - src.medical_rag_system - INFO - Medical RAG System initialized successfully
+2025-10-19 11:37:53,700 - src.medical_rag_system - INFO - Answering question: which family of drugs does gravol belong to ?
+2025-10-19 11:37:53,701 - src.medical_rag_system - INFO - Searching for: which family of drugs does gravol belong to ?
+2025-10-19 11:37:53,701 - embedding_manager - INFO - Generating embeddings for 1 texts
+2025-10-19 11:37:54,325 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.316s]
+2025-10-19 11:37:54,325 - elasticsearch_manager - INFO - Found 20 results for query: which family of drugs does gravol belong to ?
+2025-10-19 11:37:54,472 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.147s]
+2025-10-19 11:37:54,472 - elasticsearch_manager - INFO - Found 10 results for query: which family of drugs does gravol belong to ?
+2025-10-19 11:37:54,472 - rag_pipeline - INFO - Answering question: which family of drugs does gravol belong to ?
+2025-10-19 11:37:54,478 - rag_pipeline - INFO - Question type detection - Contra: False, MOA: False, Indication: False, Dosage: False, Side effects: False, Interactions: False, Storage: False, General: False

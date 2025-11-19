@@ -1,0 +1,471 @@
+2025-10-17 00:03:41,509 - src.medical_rag_system - INFO - Initializing Medical RAG System
+2025-10-17 00:03:41,977 - embedding_manager - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 00:03:44,238 - embedding_manager - INFO - Loaded FAISS index with 4262 vectors
+2025-10-17 00:03:44,254 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.014s]
+2025-10-17 00:03:44,255 - elasticsearch_manager - INFO - ElasticSearch cluster: docker-cluster
+2025-10-17 00:03:44,255 - elasticsearch_manager - INFO - Connected to ElasticSearch at localhost:9200
+2025-10-17 00:03:44,256 - rag_pipeline - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 00:03:46,520 - rag_pipeline - INFO - PubMedBERT model loaded successfully
+2025-10-17 00:03:46,521 - rag_pipeline - INFO - Loading QA model: ktrapeznikov/biobert_v1.1_pubmed_squad_v2
+2025-10-17 00:03:47,467 - rag_pipeline - INFO - QA model loaded successfully
+2025-10-17 00:03:47,468 - src.medical_rag_system - INFO - Medical RAG System initialized successfully
+2025-10-17 00:03:47,468 - src.medical_rag_system - INFO - Answering question: how does gravol work?
+2025-10-17 00:03:47,468 - src.medical_rag_system - INFO - Searching for: how does gravol work?
+2025-10-17 00:03:47,468 - embedding_manager - INFO - Generating embeddings for 1 texts
+2025-10-17 00:03:48,191 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.223s]
+2025-10-17 00:03:48,192 - elasticsearch_manager - INFO - Found 20 results for query: how does gravol work?
+2025-10-17 00:03:48,308 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.115s]
+2025-10-17 00:03:48,308 - elasticsearch_manager - INFO - Found 10 results for query: how does gravol work?
+2025-10-17 00:03:48,309 - rag_pipeline - INFO - Answering question: how does gravol work?
+2025-10-17 00:09:13,940 - src.medical_rag_system - INFO - Initializing Medical RAG System
+2025-10-17 00:09:14,416 - embedding_manager - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 00:09:16,606 - embedding_manager - INFO - Loaded FAISS index with 4262 vectors
+2025-10-17 00:09:16,638 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.032s]
+2025-10-17 00:09:16,640 - elasticsearch_manager - INFO - ElasticSearch cluster: docker-cluster
+2025-10-17 00:09:16,641 - elasticsearch_manager - INFO - Connected to ElasticSearch at localhost:9200
+2025-10-17 00:09:16,641 - rag_pipeline - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 00:09:18,988 - rag_pipeline - INFO - PubMedBERT model loaded successfully
+2025-10-17 00:09:18,988 - rag_pipeline - INFO - Loading QA model: ktrapeznikov/biobert_v1.1_pubmed_squad_v2
+2025-10-17 00:09:19,940 - rag_pipeline - INFO - QA model loaded successfully
+2025-10-17 00:09:19,940 - src.medical_rag_system - INFO - Medical RAG System initialized successfully
+2025-10-17 00:09:19,941 - src.medical_rag_system - INFO - Processing 1 PDF documents
+2025-10-17 00:09:19,941 - pdf_processor - INFO - Processing PDF: data\00033512.pdf
+2025-10-17 00:09:21,815 - src.medical_rag_system - INFO - Successfully processed 00033512.pdf: 78 chunks
+2025-10-17 00:09:21,816 - src.medical_rag_system - INFO - Generating embeddings for 78 chunks
+2025-10-17 00:09:21,816 - embedding_manager - INFO - Generating embeddings for 78 texts
+2025-10-17 00:09:40,899 - embedding_manager - INFO - Adding 78 embeddings to existing index
+2025-10-17 00:09:40,914 - embedding_manager - INFO - Saved FAISS index to C:\G\chatbot maclens\vector_db\faiss_index.bin
+2025-10-17 00:09:40,920 - embedding_manager - INFO - Saved metadata to C:\G\chatbot maclens\vector_db\metadata.pkl
+2025-10-17 00:09:40,920 - embedding_manager - INFO - Index now contains 4340 vectors
+2025-10-17 00:09:40,940 - elastic_transport.transport - INFO - HEAD http://localhost:9200/medical_documents [status:200 duration:0.019s]
+2025-10-17 00:09:40,940 - elasticsearch_manager - INFO - Index medical_documents already exists
+2025-10-17 00:09:40,949 - elastic_transport.transport - INFO - HEAD http://localhost:9200/medical_documents [status:200 duration:0.009s]
+2025-10-17 00:09:40,951 - elasticsearch_manager - INFO - Indexing 78 documents in ElasticSearch
+2025-10-17 00:09:41,176 - elastic_transport.transport - INFO - PUT http://localhost:9200/_bulk [status:200 duration:0.205s]
+2025-10-17 00:09:41,178 - elasticsearch_manager - INFO - Successfully indexed 78 documents
+2025-10-17 00:09:41,315 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_refresh [status:200 duration:0.137s]
+2025-10-17 00:09:41,315 - src.medical_rag_system - INFO - Successfully indexed all documents
+2025-10-17 00:10:49,948 - src.medical_rag_system - INFO - Initializing Medical RAG System
+2025-10-17 00:10:50,423 - embedding_manager - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 00:10:52,670 - embedding_manager - INFO - Loaded FAISS index with 4340 vectors
+2025-10-17 00:10:52,682 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.011s]
+2025-10-17 00:10:52,683 - elasticsearch_manager - INFO - ElasticSearch cluster: docker-cluster
+2025-10-17 00:10:52,683 - elasticsearch_manager - INFO - Connected to ElasticSearch at localhost:9200
+2025-10-17 00:10:52,683 - rag_pipeline - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 00:10:54,731 - rag_pipeline - INFO - PubMedBERT model loaded successfully
+2025-10-17 00:10:54,732 - rag_pipeline - INFO - Loading QA model: ktrapeznikov/biobert_v1.1_pubmed_squad_v2
+2025-10-17 00:10:56,069 - rag_pipeline - INFO - QA model loaded successfully
+2025-10-17 00:10:56,069 - src.medical_rag_system - INFO - Medical RAG System initialized successfully
+2025-10-17 00:10:56,069 - src.medical_rag_system - INFO - Answering question: how does gravol work?
+2025-10-17 00:10:56,069 - src.medical_rag_system - INFO - Searching for: how does gravol work?
+2025-10-17 00:10:56,071 - embedding_manager - INFO - Generating embeddings for 1 texts
+2025-10-17 00:10:56,594 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.186s]
+2025-10-17 00:10:56,595 - elasticsearch_manager - INFO - Found 20 results for query: how does gravol work?
+2025-10-17 00:10:56,684 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.089s]
+2025-10-17 00:10:56,684 - elasticsearch_manager - INFO - Found 10 results for query: how does gravol work?
+2025-10-17 00:10:56,685 - rag_pipeline - INFO - Answering question: how does gravol work?
+2025-10-17 00:11:41,816 - src.medical_rag_system - INFO - Initializing Medical RAG System
+2025-10-17 00:11:42,439 - embedding_manager - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 00:11:44,654 - embedding_manager - INFO - Loaded FAISS index with 4340 vectors
+2025-10-17 00:11:44,679 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.024s]
+2025-10-17 00:11:44,679 - elasticsearch_manager - INFO - ElasticSearch cluster: docker-cluster
+2025-10-17 00:11:44,679 - elasticsearch_manager - INFO - Connected to ElasticSearch at localhost:9200
+2025-10-17 00:11:44,679 - rag_pipeline - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 00:11:46,716 - rag_pipeline - INFO - PubMedBERT model loaded successfully
+2025-10-17 00:11:46,716 - rag_pipeline - INFO - Loading QA model: ktrapeznikov/biobert_v1.1_pubmed_squad_v2
+2025-10-17 00:11:47,646 - rag_pipeline - INFO - QA model loaded successfully
+2025-10-17 00:11:47,647 - src.medical_rag_system - INFO - Medical RAG System initialized successfully
+2025-10-17 00:11:47,647 - src.medical_rag_system - INFO - Processing 6 PDF documents
+2025-10-17 00:11:47,648 - pdf_processor - INFO - Processing PDF: data\00033512.pdf
+2025-10-17 00:11:49,388 - src.medical_rag_system - INFO - Successfully processed 00033512.pdf: 78 chunks
+2025-10-17 00:11:49,389 - pdf_processor - INFO - Processing PDF: data\00058090.pdf
+2025-10-17 00:11:51,394 - src.medical_rag_system - INFO - Successfully processed 00058090.pdf: 100 chunks
+2025-10-17 00:11:51,395 - pdf_processor - INFO - Processing PDF: data\00068263.pdf
+2025-10-17 00:11:53,124 - src.medical_rag_system - INFO - Successfully processed 00068263.pdf: 93 chunks
+2025-10-17 00:11:53,124 - pdf_processor - INFO - Processing PDF: data\00071859.pdf
+2025-10-17 00:11:55,175 - src.medical_rag_system - INFO - Successfully processed 00071859.pdf: 107 chunks
+2025-10-17 00:11:55,176 - pdf_processor - INFO - Processing PDF: data\00074795.pdf
+2025-10-17 00:11:56,248 - src.medical_rag_system - INFO - Successfully processed 00074795.pdf: 58 chunks
+2025-10-17 00:11:56,249 - pdf_processor - INFO - Processing PDF: data\00078801.pdf
+2025-10-17 00:11:57,539 - src.medical_rag_system - INFO - Successfully processed 00078801.pdf: 71 chunks
+2025-10-17 00:11:57,539 - src.medical_rag_system - INFO - Generating embeddings for 507 chunks
+2025-10-17 00:11:57,539 - embedding_manager - INFO - Generating embeddings for 507 texts
+2025-10-17 00:13:49,654 - embedding_manager - INFO - Adding 507 embeddings to existing index
+2025-10-17 00:13:49,668 - embedding_manager - INFO - Saved FAISS index to C:\G\chatbot maclens\vector_db\faiss_index.bin
+2025-10-17 00:13:49,676 - embedding_manager - INFO - Saved metadata to C:\G\chatbot maclens\vector_db\metadata.pkl
+2025-10-17 00:13:49,677 - embedding_manager - INFO - Index now contains 4847 vectors
+2025-10-17 00:13:49,682 - elastic_transport.transport - INFO - HEAD http://localhost:9200/medical_documents [status:200 duration:0.005s]
+2025-10-17 00:13:49,682 - elasticsearch_manager - INFO - Index medical_documents already exists
+2025-10-17 00:13:49,686 - elastic_transport.transport - INFO - HEAD http://localhost:9200/medical_documents [status:200 duration:0.005s]
+2025-10-17 00:13:49,686 - elasticsearch_manager - INFO - Indexing 507 documents in ElasticSearch
+2025-10-17 00:13:49,805 - elastic_transport.transport - INFO - PUT http://localhost:9200/_bulk [status:200 duration:0.101s]
+2025-10-17 00:13:49,936 - elastic_transport.transport - INFO - PUT http://localhost:9200/_bulk [status:200 duration:0.129s]
+2025-10-17 00:13:50,051 - elastic_transport.transport - INFO - PUT http://localhost:9200/_bulk [status:200 duration:0.113s]
+2025-10-17 00:13:50,154 - elastic_transport.transport - INFO - PUT http://localhost:9200/_bulk [status:200 duration:0.099s]
+2025-10-17 00:13:50,242 - elastic_transport.transport - INFO - PUT http://localhost:9200/_bulk [status:200 duration:0.085s]
+2025-10-17 00:13:50,260 - elastic_transport.transport - INFO - PUT http://localhost:9200/_bulk [status:200 duration:0.017s]
+2025-10-17 00:13:50,261 - elasticsearch_manager - INFO - Successfully indexed 507 documents
+2025-10-17 00:13:50,366 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_refresh [status:200 duration:0.105s]
+2025-10-17 00:13:50,367 - src.medical_rag_system - INFO - Successfully indexed all documents
+2025-10-17 00:14:02,911 - src.medical_rag_system - INFO - Initializing Medical RAG System
+2025-10-17 00:14:03,416 - embedding_manager - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 00:14:05,871 - embedding_manager - INFO - Loaded FAISS index with 4847 vectors
+2025-10-17 00:14:05,907 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.034s]
+2025-10-17 00:14:05,907 - elasticsearch_manager - INFO - ElasticSearch cluster: docker-cluster
+2025-10-17 00:14:05,908 - elasticsearch_manager - INFO - Connected to ElasticSearch at localhost:9200
+2025-10-17 00:14:05,911 - rag_pipeline - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 00:14:07,803 - rag_pipeline - INFO - PubMedBERT model loaded successfully
+2025-10-17 00:14:07,803 - rag_pipeline - INFO - Loading QA model: ktrapeznikov/biobert_v1.1_pubmed_squad_v2
+2025-10-17 00:14:08,647 - rag_pipeline - INFO - QA model loaded successfully
+2025-10-17 00:14:08,647 - src.medical_rag_system - INFO - Medical RAG System initialized successfully
+2025-10-17 00:14:08,648 - src.medical_rag_system - INFO - Answering question: how does gravol work?
+2025-10-17 00:14:08,648 - src.medical_rag_system - INFO - Searching for: how does gravol work?
+2025-10-17 00:14:08,648 - embedding_manager - INFO - Generating embeddings for 1 texts
+2025-10-17 00:14:09,237 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.187s]
+2025-10-17 00:14:09,238 - elasticsearch_manager - INFO - Found 20 results for query: how does gravol work?
+2025-10-17 00:14:09,331 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.092s]
+2025-10-17 00:14:09,332 - elasticsearch_manager - INFO - Found 10 results for query: how does gravol work?
+2025-10-17 00:14:09,332 - rag_pipeline - INFO - Answering question: how does gravol work?
+2025-10-17 00:22:46,914 - src.medical_rag_system - INFO - Initializing Medical RAG System
+2025-10-17 00:22:47,942 - embedding_manager - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 00:22:50,461 - embedding_manager - INFO - Loaded FAISS index with 4847 vectors
+2025-10-17 00:22:50,480 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.017s]
+2025-10-17 00:22:50,482 - elasticsearch_manager - INFO - ElasticSearch cluster: docker-cluster
+2025-10-17 00:22:50,483 - elasticsearch_manager - INFO - Connected to ElasticSearch at localhost:9200
+2025-10-17 00:22:50,484 - rag_pipeline - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 00:22:52,545 - rag_pipeline - INFO - PubMedBERT model loaded successfully
+2025-10-17 00:22:52,545 - rag_pipeline - INFO - Loading QA model: ktrapeznikov/biobert_v1.1_pubmed_squad_v2
+2025-10-17 00:22:53,554 - rag_pipeline - INFO - QA model loaded successfully
+2025-10-17 00:22:53,554 - src.medical_rag_system - INFO - Medical RAG System initialized successfully
+2025-10-17 00:22:53,554 - src.medical_rag_system - INFO - Answering question: how does gravol work?
+2025-10-17 00:22:53,554 - src.medical_rag_system - INFO - Searching for: how does gravol work?
+2025-10-17 00:22:53,555 - embedding_manager - INFO - Generating embeddings for 1 texts
+2025-10-17 00:22:54,154 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.175s]
+2025-10-17 00:22:54,154 - elasticsearch_manager - INFO - Found 20 results for query: how does gravol work?
+2025-10-17 00:22:54,236 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.082s]
+2025-10-17 00:22:54,237 - elasticsearch_manager - INFO - Found 10 results for query: how does gravol work?
+2025-10-17 00:22:54,237 - rag_pipeline - INFO - Answering question: how does gravol work?
+2025-10-17 00:28:55,558 - src.medical_rag_system - INFO - Initializing Medical RAG System
+2025-10-17 00:28:56,025 - embedding_manager - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 00:28:58,243 - embedding_manager - INFO - Loaded FAISS index with 4847 vectors
+2025-10-17 00:28:58,260 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.016s]
+2025-10-17 00:28:58,260 - elasticsearch_manager - INFO - ElasticSearch cluster: docker-cluster
+2025-10-17 00:28:58,260 - elasticsearch_manager - INFO - Connected to ElasticSearch at localhost:9200
+2025-10-17 00:28:58,260 - rag_pipeline - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 00:29:00,328 - rag_pipeline - INFO - PubMedBERT model loaded successfully
+2025-10-17 00:29:00,329 - rag_pipeline - INFO - Loading QA model: ktrapeznikov/biobert_v1.1_pubmed_squad_v2
+2025-10-17 00:29:01,249 - rag_pipeline - INFO - QA model loaded successfully
+2025-10-17 00:29:01,250 - src.medical_rag_system - INFO - Medical RAG System initialized successfully
+2025-10-17 00:29:01,250 - src.medical_rag_system - INFO - Answering question: which family of drugs does gravol belong to ?
+2025-10-17 00:29:01,250 - src.medical_rag_system - INFO - Searching for: which family of drugs does gravol belong to ?
+2025-10-17 00:29:01,251 - embedding_manager - INFO - Generating embeddings for 1 texts
+2025-10-17 00:29:01,987 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.320s]
+2025-10-17 00:29:01,988 - elasticsearch_manager - INFO - Found 20 results for query: which family of drugs does gravol belong to ?
+2025-10-17 00:29:02,160 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.172s]
+2025-10-17 00:29:02,161 - elasticsearch_manager - INFO - Found 10 results for query: which family of drugs does gravol belong to ?
+2025-10-17 00:29:02,161 - rag_pipeline - INFO - Answering question: which family of drugs does gravol belong to ?
+2025-10-17 00:31:42,944 - src.medical_rag_system - INFO - Initializing Medical RAG System
+2025-10-17 00:31:43,420 - embedding_manager - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 00:31:45,654 - embedding_manager - INFO - Loaded FAISS index with 4847 vectors
+2025-10-17 00:31:45,677 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.022s]
+2025-10-17 00:31:45,678 - elasticsearch_manager - INFO - ElasticSearch cluster: docker-cluster
+2025-10-17 00:31:45,678 - elasticsearch_manager - INFO - Connected to ElasticSearch at localhost:9200
+2025-10-17 00:31:45,678 - rag_pipeline - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 00:31:48,120 - rag_pipeline - INFO - PubMedBERT model loaded successfully
+2025-10-17 00:31:48,120 - rag_pipeline - INFO - Loading QA model: ktrapeznikov/biobert_v1.1_pubmed_squad_v2
+2025-10-17 00:31:49,031 - rag_pipeline - INFO - QA model loaded successfully
+2025-10-17 00:31:49,032 - src.medical_rag_system - INFO - Medical RAG System initialized successfully
+2025-10-17 00:31:49,032 - src.medical_rag_system - INFO - Answering question: what are the ingredients in gravol?
+2025-10-17 00:31:49,032 - src.medical_rag_system - INFO - Searching for: what are the ingredients in gravol?
+2025-10-17 00:31:49,032 - embedding_manager - INFO - Generating embeddings for 1 texts
+2025-10-17 00:31:49,697 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.263s]
+2025-10-17 00:31:49,697 - elasticsearch_manager - INFO - Found 20 results for query: what are the ingredients in gravol?
+2025-10-17 00:31:49,827 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.130s]
+2025-10-17 00:31:49,828 - elasticsearch_manager - INFO - Found 10 results for query: what are the ingredients in gravol?
+2025-10-17 00:31:49,828 - rag_pipeline - INFO - Answering question: what are the ingredients in gravol?
+2025-10-17 00:32:46,356 - src.medical_rag_system - INFO - Initializing Medical RAG System
+2025-10-17 00:32:46,830 - embedding_manager - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 00:32:48,987 - embedding_manager - INFO - Loaded FAISS index with 4847 vectors
+2025-10-17 00:32:48,999 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.012s]
+2025-10-17 00:32:48,999 - elasticsearch_manager - INFO - ElasticSearch cluster: docker-cluster
+2025-10-17 00:32:48,999 - elasticsearch_manager - INFO - Connected to ElasticSearch at localhost:9200
+2025-10-17 00:32:49,001 - rag_pipeline - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 00:32:51,106 - rag_pipeline - INFO - PubMedBERT model loaded successfully
+2025-10-17 00:32:51,106 - rag_pipeline - INFO - Loading QA model: ktrapeznikov/biobert_v1.1_pubmed_squad_v2
+2025-10-17 00:32:52,000 - rag_pipeline - INFO - QA model loaded successfully
+2025-10-17 00:32:52,000 - src.medical_rag_system - INFO - Medical RAG System initialized successfully
+2025-10-17 00:32:52,002 - src.medical_rag_system - INFO - Answering question: what are the ingredients in gravol?
+2025-10-17 00:32:52,002 - src.medical_rag_system - INFO - Searching for: what are the ingredients in gravol?
+2025-10-17 00:32:52,002 - embedding_manager - INFO - Generating embeddings for 1 texts
+2025-10-17 00:32:52,612 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.256s]
+2025-10-17 00:32:52,612 - elasticsearch_manager - INFO - Found 20 results for query: what are the ingredients in gravol?
+2025-10-17 00:32:52,736 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.124s]
+2025-10-17 00:32:52,736 - elasticsearch_manager - INFO - Found 10 results for query: what are the ingredients in gravol?
+2025-10-17 00:32:52,737 - rag_pipeline - INFO - Answering question: what are the ingredients in gravol?
+2025-10-17 00:36:50,718 - src.medical_rag_system - INFO - Initializing Medical RAG System
+2025-10-17 00:36:51,151 - embedding_manager - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 00:36:53,938 - embedding_manager - INFO - Loaded FAISS index with 4847 vectors
+2025-10-17 00:36:53,952 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.013s]
+2025-10-17 00:36:53,952 - elasticsearch_manager - INFO - ElasticSearch cluster: docker-cluster
+2025-10-17 00:36:53,952 - elasticsearch_manager - INFO - Connected to ElasticSearch at localhost:9200
+2025-10-17 00:36:53,954 - rag_pipeline - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 00:36:56,288 - rag_pipeline - INFO - PubMedBERT model loaded successfully
+2025-10-17 00:36:56,288 - rag_pipeline - INFO - Loading QA model: ktrapeznikov/biobert_v1.1_pubmed_squad_v2
+2025-10-17 00:36:57,325 - rag_pipeline - INFO - QA model loaded successfully
+2025-10-17 00:36:57,325 - src.medical_rag_system - INFO - Medical RAG System initialized successfully
+2025-10-17 00:36:57,325 - src.medical_rag_system - INFO - Answering question: what are the medical ingredients
+2025-10-17 00:36:57,326 - src.medical_rag_system - INFO - Searching for: what are the medical ingredients
+2025-10-17 00:36:57,326 - embedding_manager - INFO - Generating embeddings for 1 texts
+2025-10-17 00:36:57,910 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.232s]
+2025-10-17 00:36:57,910 - elasticsearch_manager - INFO - Found 20 results for query: what are the medical ingredients
+2025-10-17 00:36:58,032 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.121s]
+2025-10-17 00:36:58,033 - elasticsearch_manager - INFO - Found 10 results for query: what are the medical ingredients
+2025-10-17 00:36:58,033 - rag_pipeline - INFO - Answering question: what are the medical ingredients
+2025-10-17 00:42:39,990 - src.medical_rag_system - INFO - Initializing Medical RAG System
+2025-10-17 00:42:40,429 - embedding_manager - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 00:42:42,548 - embedding_manager - INFO - Loaded FAISS index with 4847 vectors
+2025-10-17 00:42:42,557 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.006s]
+2025-10-17 00:42:42,557 - elasticsearch_manager - INFO - ElasticSearch cluster: docker-cluster
+2025-10-17 00:42:42,557 - elasticsearch_manager - INFO - Connected to ElasticSearch at localhost:9200
+2025-10-17 00:42:42,557 - rag_pipeline - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 00:42:44,574 - rag_pipeline - INFO - PubMedBERT model loaded successfully
+2025-10-17 00:42:44,574 - rag_pipeline - INFO - Loading QA model: ktrapeznikov/biobert_v1.1_pubmed_squad_v2
+2025-10-17 00:42:45,474 - rag_pipeline - INFO - QA model loaded successfully
+2025-10-17 00:42:45,474 - src.medical_rag_system - INFO - Medical RAG System initialized successfully
+2025-10-17 00:42:45,474 - src.medical_rag_system - INFO - Answering question: what is the indication and clinical use for gravol
+2025-10-17 00:42:45,474 - src.medical_rag_system - INFO - Searching for: what is the indication and clinical use for gravol
+2025-10-17 00:42:45,474 - embedding_manager - INFO - Generating embeddings for 1 texts
+2025-10-17 00:42:46,143 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.295s]
+2025-10-17 00:42:46,143 - elasticsearch_manager - INFO - Found 20 results for query: what is the indication and clinical use for gravol
+2025-10-17 00:42:46,272 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.129s]
+2025-10-17 00:42:46,272 - elasticsearch_manager - INFO - Found 10 results for query: what is the indication and clinical use for gravol
+2025-10-17 00:42:46,272 - rag_pipeline - INFO - Answering question: what is the indication and clinical use for gravol
+2025-10-17 00:43:55,011 - src.medical_rag_system - INFO - Initializing Medical RAG System
+2025-10-17 00:43:55,430 - embedding_manager - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 00:43:57,983 - embedding_manager - INFO - Loaded FAISS index with 4847 vectors
+2025-10-17 00:43:57,994 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.011s]
+2025-10-17 00:43:57,994 - elasticsearch_manager - INFO - ElasticSearch cluster: docker-cluster
+2025-10-17 00:43:57,994 - elasticsearch_manager - INFO - Connected to ElasticSearch at localhost:9200
+2025-10-17 00:43:57,994 - rag_pipeline - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 00:44:00,010 - rag_pipeline - INFO - PubMedBERT model loaded successfully
+2025-10-17 00:44:00,012 - rag_pipeline - INFO - Loading QA model: ktrapeznikov/biobert_v1.1_pubmed_squad_v2
+2025-10-17 00:44:00,853 - rag_pipeline - INFO - QA model loaded successfully
+2025-10-17 00:44:00,853 - src.medical_rag_system - INFO - Medical RAG System initialized successfully
+2025-10-17 00:44:00,853 - src.medical_rag_system - INFO - Answering question: what is the clinical use for gravol
+2025-10-17 00:44:00,853 - src.medical_rag_system - INFO - Searching for: what is the clinical use for gravol
+2025-10-17 00:44:00,858 - embedding_manager - INFO - Generating embeddings for 1 texts
+2025-10-17 00:44:01,338 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.179s]
+2025-10-17 00:44:01,347 - elasticsearch_manager - INFO - Found 20 results for query: what is the clinical use for gravol
+2025-10-17 00:44:01,443 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.096s]
+2025-10-17 00:44:01,443 - elasticsearch_manager - INFO - Found 10 results for query: what is the clinical use for gravol
+2025-10-17 00:44:01,443 - rag_pipeline - INFO - Answering question: what is the clinical use for gravol
+2025-10-17 01:13:21,757 - src.medical_rag_system - INFO - Initializing Medical RAG System
+2025-10-17 01:13:22,235 - embedding_manager - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 01:13:24,477 - embedding_manager - INFO - Loaded FAISS index with 4847 vectors
+2025-10-17 01:13:24,495 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.017s]
+2025-10-17 01:13:24,496 - elasticsearch_manager - INFO - ElasticSearch cluster: docker-cluster
+2025-10-17 01:13:24,496 - elasticsearch_manager - INFO - Connected to ElasticSearch at localhost:9200
+2025-10-17 01:13:24,496 - rag_pipeline - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 01:13:26,558 - rag_pipeline - INFO - PubMedBERT model loaded successfully
+2025-10-17 01:13:26,558 - rag_pipeline - INFO - Loading QA model: ktrapeznikov/biobert_v1.1_pubmed_squad_v2
+2025-10-17 01:13:27,524 - rag_pipeline - INFO - QA model loaded successfully
+2025-10-17 01:13:27,524 - src.medical_rag_system - INFO - Medical RAG System initialized successfully
+2025-10-17 01:13:27,524 - src.medical_rag_system - INFO - Answering question: what are the CONTRAINDICATIONS for gravol?
+2025-10-17 01:13:27,524 - src.medical_rag_system - INFO - Searching for: what are the CONTRAINDICATIONS for gravol?
+2025-10-17 01:13:27,524 - embedding_manager - INFO - Generating embeddings for 1 texts
+2025-10-17 01:13:28,176 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.289s]
+2025-10-17 01:13:28,177 - elasticsearch_manager - INFO - Found 20 results for query: what are the CONTRAINDICATIONS for gravol?
+2025-10-17 01:13:28,334 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.156s]
+2025-10-17 01:13:28,335 - elasticsearch_manager - INFO - Found 10 results for query: what are the CONTRAINDICATIONS for gravol?
+2025-10-17 01:13:28,335 - rag_pipeline - INFO - Answering question: what are the CONTRAINDICATIONS for gravol?
+2025-10-17 01:19:45,986 - src.medical_rag_system - INFO - Initializing Medical RAG System
+2025-10-17 01:19:46,449 - embedding_manager - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 01:19:49,080 - embedding_manager - INFO - Loaded FAISS index with 4847 vectors
+2025-10-17 01:19:49,100 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.019s]
+2025-10-17 01:19:49,100 - elasticsearch_manager - INFO - ElasticSearch cluster: docker-cluster
+2025-10-17 01:19:49,101 - elasticsearch_manager - INFO - Connected to ElasticSearch at localhost:9200
+2025-10-17 01:19:49,101 - rag_pipeline - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 01:19:51,946 - rag_pipeline - INFO - PubMedBERT model loaded successfully
+2025-10-17 01:19:51,946 - rag_pipeline - INFO - Loading QA model: ktrapeznikov/biobert_v1.1_pubmed_squad_v2
+2025-10-17 01:19:52,848 - rag_pipeline - INFO - QA model loaded successfully
+2025-10-17 01:19:52,848 - src.medical_rag_system - INFO - Medical RAG System initialized successfully
+2025-10-17 01:19:52,849 - src.medical_rag_system - INFO - Answering question: give me all warning and precautions for gravol
+2025-10-17 01:19:52,849 - src.medical_rag_system - INFO - Searching for: give me all warning and precautions for gravol
+2025-10-17 01:19:52,849 - embedding_manager - INFO - Generating embeddings for 1 texts
+2025-10-17 01:19:53,486 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.279s]
+2025-10-17 01:19:53,487 - elasticsearch_manager - INFO - Found 20 results for query: give me all warning and precautions for gravol
+2025-10-17 01:19:53,632 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.145s]
+2025-10-17 01:19:53,633 - elasticsearch_manager - INFO - Found 10 results for query: give me all warning and precautions for gravol
+2025-10-17 01:19:53,633 - rag_pipeline - INFO - Answering question: give me all warning and precautions for gravol
+2025-10-17 01:46:09,777 - src.medical_rag_system - INFO - Initializing Medical RAG System
+2025-10-17 01:46:10,226 - embedding_manager - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 01:46:12,515 - embedding_manager - INFO - Loaded FAISS index with 4847 vectors
+2025-10-17 01:46:12,524 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.008s]
+2025-10-17 01:46:12,525 - elasticsearch_manager - INFO - ElasticSearch cluster: docker-cluster
+2025-10-17 01:46:12,525 - elasticsearch_manager - INFO - Connected to ElasticSearch at localhost:9200
+2025-10-17 01:46:12,525 - rag_pipeline - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 01:46:14,461 - rag_pipeline - INFO - PubMedBERT model loaded successfully
+2025-10-17 01:46:14,462 - rag_pipeline - INFO - Loading QA model: ktrapeznikov/biobert_v1.1_pubmed_squad_v2
+2025-10-17 01:46:15,329 - rag_pipeline - INFO - QA model loaded successfully
+2025-10-17 01:46:15,329 - src.medical_rag_system - INFO - Medical RAG System initialized successfully
+2025-10-17 01:46:15,330 - src.medical_rag_system - INFO - Answering question: give me all warning and precautions for gravol
+2025-10-17 01:46:15,330 - src.medical_rag_system - INFO - Searching for: give me all warning and precautions for gravol
+2025-10-17 01:46:15,330 - embedding_manager - INFO - Generating embeddings for 1 texts
+2025-10-17 01:46:15,960 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.276s]
+2025-10-17 01:46:15,960 - elasticsearch_manager - INFO - Found 20 results for query: give me all warning and precautions for gravol
+2025-10-17 01:46:16,102 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.141s]
+2025-10-17 01:46:16,102 - elasticsearch_manager - INFO - Found 10 results for query: give me all warning and precautions for gravol
+2025-10-17 01:46:16,103 - rag_pipeline - INFO - Answering question: give me all warning and precautions for gravol
+2025-10-17 02:07:12,341 - src.medical_rag_system - INFO - Initializing Medical RAG System
+2025-10-17 02:07:12,925 - embedding_manager - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 02:07:15,197 - embedding_manager - INFO - Loaded FAISS index with 4847 vectors
+2025-10-17 02:07:15,209 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.011s]
+2025-10-17 02:07:15,209 - elasticsearch_manager - INFO - ElasticSearch cluster: docker-cluster
+2025-10-17 02:07:15,209 - elasticsearch_manager - INFO - Connected to ElasticSearch at localhost:9200
+2025-10-17 02:07:15,210 - rag_pipeline - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 02:07:17,287 - rag_pipeline - INFO - PubMedBERT model loaded successfully
+2025-10-17 02:07:17,288 - rag_pipeline - INFO - Loading QA model: ktrapeznikov/biobert_v1.1_pubmed_squad_v2
+2025-10-17 02:07:18,394 - rag_pipeline - INFO - QA model loaded successfully
+2025-10-17 02:07:18,394 - src.medical_rag_system - INFO - Medical RAG System initialized successfully
+2025-10-17 02:07:18,395 - src.medical_rag_system - INFO - Answering question: give me all warning and precautions for gravol
+2025-10-17 02:07:18,395 - src.medical_rag_system - INFO - Searching for: give me all warning and precautions for gravol
+2025-10-17 02:07:18,395 - embedding_manager - INFO - Generating embeddings for 1 texts
+2025-10-17 02:07:19,075 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.301s]
+2025-10-17 02:07:19,075 - elasticsearch_manager - INFO - Found 20 results for query: give me all warning and precautions for gravol
+2025-10-17 02:07:19,245 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.170s]
+2025-10-17 02:07:19,245 - elasticsearch_manager - INFO - Found 10 results for query: give me all warning and precautions for gravol
+2025-10-17 02:07:19,246 - rag_pipeline - INFO - Answering question: give me all warning and precautions for gravol
+2025-10-17 02:28:54,787 - src.medical_rag_system - INFO - Initializing Medical RAG System
+2025-10-17 02:28:55,250 - embedding_manager - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 02:28:57,500 - embedding_manager - INFO - Loaded FAISS index with 4847 vectors
+2025-10-17 02:28:57,515 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.013s]
+2025-10-17 02:28:57,515 - elasticsearch_manager - INFO - ElasticSearch cluster: docker-cluster
+2025-10-17 02:28:57,515 - elasticsearch_manager - INFO - Connected to ElasticSearch at localhost:9200
+2025-10-17 02:28:57,516 - rag_pipeline - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 02:28:59,986 - rag_pipeline - INFO - PubMedBERT model loaded successfully
+2025-10-17 02:28:59,987 - rag_pipeline - INFO - Loading QA model: ktrapeznikov/biobert_v1.1_pubmed_squad_v2
+2025-10-17 02:29:00,884 - rag_pipeline - INFO - QA model loaded successfully
+2025-10-17 02:29:00,887 - src.medical_rag_system - INFO - Medical RAG System initialized successfully
+2025-10-17 02:29:00,887 - src.medical_rag_system - INFO - Answering question: give me all warning and precautions for gravol
+2025-10-17 02:29:00,887 - src.medical_rag_system - INFO - Searching for: give me all warning and precautions for gravol
+2025-10-17 02:29:00,887 - embedding_manager - INFO - Generating embeddings for 1 texts
+2025-10-17 02:29:01,595 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.292s]
+2025-10-17 02:29:01,596 - elasticsearch_manager - INFO - Found 20 results for query: give me all warning and precautions for gravol
+2025-10-17 02:29:01,743 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.147s]
+2025-10-17 02:29:01,744 - elasticsearch_manager - INFO - Found 10 results for query: give me all warning and precautions for gravol
+2025-10-17 02:29:01,745 - rag_pipeline - INFO - Answering question: give me all warning and precautions for gravol
+2025-10-17 02:38:56,917 - src.medical_rag_system - INFO - Initializing Medical RAG System
+2025-10-17 02:38:57,379 - embedding_manager - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 02:38:59,575 - embedding_manager - INFO - Loaded FAISS index with 4847 vectors
+2025-10-17 02:38:59,606 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.030s]
+2025-10-17 02:38:59,606 - elasticsearch_manager - INFO - ElasticSearch cluster: docker-cluster
+2025-10-17 02:38:59,608 - elasticsearch_manager - INFO - Connected to ElasticSearch at localhost:9200
+2025-10-17 02:38:59,609 - rag_pipeline - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 02:39:01,594 - rag_pipeline - INFO - PubMedBERT model loaded successfully
+2025-10-17 02:39:01,595 - rag_pipeline - INFO - Loading QA model: ktrapeznikov/biobert_v1.1_pubmed_squad_v2
+2025-10-17 02:39:02,428 - rag_pipeline - INFO - QA model loaded successfully
+2025-10-17 02:39:02,428 - src.medical_rag_system - INFO - Medical RAG System initialized successfully
+2025-10-17 02:39:02,429 - src.medical_rag_system - INFO - Answering question: give me all warning and precautions for gravol
+2025-10-17 02:39:02,429 - src.medical_rag_system - INFO - Searching for: give me all warning and precautions for gravol
+2025-10-17 02:39:02,429 - embedding_manager - INFO - Generating embeddings for 1 texts
+2025-10-17 02:39:03,091 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.315s]
+2025-10-17 02:39:03,091 - elasticsearch_manager - INFO - Found 20 results for query: give me all warning and precautions for gravol
+2025-10-17 02:39:03,239 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.147s]
+2025-10-17 02:39:03,239 - elasticsearch_manager - INFO - Found 10 results for query: give me all warning and precautions for gravol
+2025-10-17 02:39:03,241 - rag_pipeline - INFO - Answering question: give me all warning and precautions for gravol
+2025-10-17 02:41:08,179 - src.medical_rag_system - INFO - Initializing Medical RAG System
+2025-10-17 02:41:08,644 - embedding_manager - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 02:41:10,809 - embedding_manager - INFO - Loaded FAISS index with 4847 vectors
+2025-10-17 02:41:10,835 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.018s]
+2025-10-17 02:41:10,836 - elasticsearch_manager - INFO - ElasticSearch cluster: docker-cluster
+2025-10-17 02:41:10,836 - elasticsearch_manager - INFO - Connected to ElasticSearch at localhost:9200
+2025-10-17 02:41:10,836 - rag_pipeline - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 02:41:12,874 - rag_pipeline - INFO - PubMedBERT model loaded successfully
+2025-10-17 02:41:12,875 - rag_pipeline - INFO - Loading QA model: ktrapeznikov/biobert_v1.1_pubmed_squad_v2
+2025-10-17 02:41:13,760 - rag_pipeline - INFO - QA model loaded successfully
+2025-10-17 02:41:13,760 - src.medical_rag_system - INFO - Medical RAG System initialized successfully
+2025-10-17 02:41:13,761 - src.medical_rag_system - INFO - Answering question: how does gravol work?
+2025-10-17 02:41:13,761 - src.medical_rag_system - INFO - Searching for: how does gravol work?
+2025-10-17 02:41:13,761 - embedding_manager - INFO - Generating embeddings for 1 texts
+2025-10-17 02:41:14,311 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.138s]
+2025-10-17 02:41:14,313 - elasticsearch_manager - INFO - Found 20 results for query: how does gravol work?
+2025-10-17 02:41:14,379 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.066s]
+2025-10-17 02:41:14,381 - elasticsearch_manager - INFO - Found 10 results for query: how does gravol work?
+2025-10-17 02:41:14,381 - rag_pipeline - INFO - Answering question: how does gravol work?
+2025-10-17 02:42:47,254 - src.medical_rag_system - INFO - Initializing Medical RAG System
+2025-10-17 02:42:47,716 - embedding_manager - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 02:42:49,919 - embedding_manager - INFO - Loaded FAISS index with 4847 vectors
+2025-10-17 02:42:49,937 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.013s]
+2025-10-17 02:42:49,938 - elasticsearch_manager - INFO - ElasticSearch cluster: docker-cluster
+2025-10-17 02:42:49,938 - elasticsearch_manager - INFO - Connected to ElasticSearch at localhost:9200
+2025-10-17 02:42:49,938 - rag_pipeline - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 02:42:51,964 - rag_pipeline - INFO - PubMedBERT model loaded successfully
+2025-10-17 02:42:51,964 - rag_pipeline - INFO - Loading QA model: ktrapeznikov/biobert_v1.1_pubmed_squad_v2
+2025-10-17 02:42:52,849 - rag_pipeline - INFO - QA model loaded successfully
+2025-10-17 02:42:52,852 - src.medical_rag_system - INFO - Medical RAG System initialized successfully
+2025-10-17 02:42:52,852 - src.medical_rag_system - INFO - Answering question: what are the CONTRAINDICATIONS for gravol?
+2025-10-17 02:42:52,853 - src.medical_rag_system - INFO - Searching for: what are the CONTRAINDICATIONS for gravol?
+2025-10-17 02:42:52,853 - embedding_manager - INFO - Generating embeddings for 1 texts
+2025-10-17 02:42:53,669 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.336s]
+2025-10-17 02:42:53,670 - elasticsearch_manager - INFO - Found 20 results for query: what are the CONTRAINDICATIONS for gravol?
+2025-10-17 02:42:53,844 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.174s]
+2025-10-17 02:42:53,844 - elasticsearch_manager - INFO - Found 10 results for query: what are the CONTRAINDICATIONS for gravol?
+2025-10-17 02:42:53,844 - rag_pipeline - INFO - Answering question: what are the CONTRAINDICATIONS for gravol?
+2025-10-17 02:43:31,573 - src.medical_rag_system - INFO - Initializing Medical RAG System
+2025-10-17 02:43:32,028 - embedding_manager - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 02:43:34,201 - embedding_manager - INFO - Loaded FAISS index with 4847 vectors
+2025-10-17 02:43:34,216 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.016s]
+2025-10-17 02:43:34,217 - elasticsearch_manager - INFO - ElasticSearch cluster: docker-cluster
+2025-10-17 02:43:34,217 - elasticsearch_manager - INFO - Connected to ElasticSearch at localhost:9200
+2025-10-17 02:43:34,217 - rag_pipeline - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 02:43:36,259 - rag_pipeline - INFO - PubMedBERT model loaded successfully
+2025-10-17 02:43:36,259 - rag_pipeline - INFO - Loading QA model: ktrapeznikov/biobert_v1.1_pubmed_squad_v2
+2025-10-17 02:43:37,159 - rag_pipeline - INFO - QA model loaded successfully
+2025-10-17 02:43:37,159 - src.medical_rag_system - INFO - Medical RAG System initialized successfully
+2025-10-17 02:43:37,159 - src.medical_rag_system - INFO - Answering question: what is the clinical use for gravol
+2025-10-17 02:43:37,159 - src.medical_rag_system - INFO - Searching for: what is the clinical use for gravol
+2025-10-17 02:43:37,159 - embedding_manager - INFO - Generating embeddings for 1 texts
+2025-10-17 02:43:37,727 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.198s]
+2025-10-17 02:43:37,729 - elasticsearch_manager - INFO - Found 20 results for query: what is the clinical use for gravol
+2025-10-17 02:43:37,858 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.129s]
+2025-10-17 02:43:37,859 - elasticsearch_manager - INFO - Found 10 results for query: what is the clinical use for gravol
+2025-10-17 02:43:37,859 - rag_pipeline - INFO - Answering question: what is the clinical use for gravol
+2025-10-17 02:55:41,375 - src.medical_rag_system - INFO - Initializing Medical RAG System
+2025-10-17 02:55:41,845 - embedding_manager - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 02:55:44,006 - embedding_manager - INFO - Loaded FAISS index with 4847 vectors
+2025-10-17 02:55:44,012 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.004s]
+2025-10-17 02:55:44,012 - elasticsearch_manager - INFO - ElasticSearch cluster: docker-cluster
+2025-10-17 02:55:44,012 - elasticsearch_manager - INFO - Connected to ElasticSearch at localhost:9200
+2025-10-17 02:55:44,016 - rag_pipeline - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 02:55:46,529 - rag_pipeline - INFO - PubMedBERT model loaded successfully
+2025-10-17 02:55:46,529 - rag_pipeline - INFO - Loading QA model: ktrapeznikov/biobert_v1.1_pubmed_squad_v2
+2025-10-17 02:55:47,737 - rag_pipeline - INFO - QA model loaded successfully
+2025-10-17 02:55:47,739 - src.medical_rag_system - INFO - Medical RAG System initialized successfully
+2025-10-17 02:55:47,739 - src.medical_rag_system - INFO - Answering question: what is the clinical use for gravol
+2025-10-17 02:55:47,739 - src.medical_rag_system - INFO - Searching for: what is the clinical use for gravol
+2025-10-17 02:55:47,739 - embedding_manager - INFO - Generating embeddings for 1 texts
+2025-10-17 02:55:48,359 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.195s]
+2025-10-17 02:55:48,359 - elasticsearch_manager - INFO - Found 20 results for query: what is the clinical use for gravol
+2025-10-17 02:55:48,455 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.096s]
+2025-10-17 02:55:48,456 - elasticsearch_manager - INFO - Found 10 results for query: what is the clinical use for gravol
+2025-10-17 02:55:48,456 - rag_pipeline - INFO - Answering question: what is the clinical use for gravol
+2025-10-17 03:00:57,379 - src.medical_rag_system - INFO - Initializing Medical RAG System
+2025-10-17 03:00:57,888 - embedding_manager - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 03:01:00,169 - embedding_manager - INFO - Loaded FAISS index with 4847 vectors
+2025-10-17 03:01:00,179 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.010s]
+2025-10-17 03:01:00,179 - elasticsearch_manager - INFO - ElasticSearch cluster: docker-cluster
+2025-10-17 03:01:00,179 - elasticsearch_manager - INFO - Connected to ElasticSearch at localhost:9200
+2025-10-17 03:01:00,179 - rag_pipeline - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-17 03:01:02,233 - rag_pipeline - INFO - PubMedBERT model loaded successfully
+2025-10-17 03:01:02,233 - rag_pipeline - INFO - Loading QA model: ktrapeznikov/biobert_v1.1_pubmed_squad_v2
+2025-10-17 03:01:03,219 - rag_pipeline - INFO - QA model loaded successfully
+2025-10-17 03:01:03,219 - src.medical_rag_system - INFO - Medical RAG System initialized successfully
+2025-10-17 03:01:03,219 - src.medical_rag_system - INFO - Answering question: what is the clinical use for gravol
+2025-10-17 03:01:03,219 - src.medical_rag_system - INFO - Searching for: what is the clinical use for gravol
+2025-10-17 03:01:03,219 - embedding_manager - INFO - Generating embeddings for 1 texts
+2025-10-17 03:01:03,872 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.196s]
+2025-10-17 03:01:03,872 - elasticsearch_manager - INFO - Found 20 results for query: what is the clinical use for gravol
+2025-10-17 03:01:03,976 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.104s]
+2025-10-17 03:01:03,976 - elasticsearch_manager - INFO - Found 10 results for query: what is the clinical use for gravol
+2025-10-17 03:01:03,976 - rag_pipeline - INFO - Answering question: what is the clinical use for gravol
+2025-10-17 03:01:03,979 - rag_pipeline - INFO - Question type detection - Contra: False, MOA: False, Indication: True, Dosage: False, Side effects: False, Interactions: False, Storage: False, General: False

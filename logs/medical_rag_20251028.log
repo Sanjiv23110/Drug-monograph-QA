@@ -1,0 +1,160 @@
+2025-10-28 21:24:36,585 - src.medical_rag_system - INFO - Initializing Medical RAG System
+2025-10-28 21:24:37,543 - embedding_manager - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-28 21:24:40,797 - embedding_manager - INFO - Loaded FAISS index with 4847 vectors
+2025-10-28 21:24:40,985 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.187s]
+2025-10-28 21:24:40,985 - elasticsearch_manager - INFO - ElasticSearch cluster: docker-cluster
+2025-10-28 21:24:40,986 - elasticsearch_manager - INFO - Connected to ElasticSearch at localhost:9200
+2025-10-28 21:24:40,987 - rag_pipeline - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-28 21:24:43,934 - rag_pipeline - INFO - PubMedBERT model loaded successfully
+2025-10-28 21:24:43,935 - rag_pipeline - INFO - Loading QA model: ktrapeznikov/biobert_v1.1_pubmed_squad_v2
+2025-10-28 21:24:45,333 - rag_pipeline - INFO - QA model loaded successfully
+2025-10-28 21:24:45,334 - src.medical_rag_system - INFO - Medical RAG System initialized successfully
+2025-10-28 21:24:45,334 - src.medical_rag_system - INFO - Answering question: which family of drugs does gravol belong to ?
+2025-10-28 21:24:45,334 - src.medical_rag_system - INFO - Searching for: which family of drugs does gravol belong to ?
+2025-10-28 21:24:45,334 - embedding_manager - INFO - Generating embeddings for 1 texts
+2025-10-28 21:24:47,420 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:1.092s]
+2025-10-28 21:24:47,420 - elasticsearch_manager - INFO - Found 20 results for query: which family of drugs does gravol belong to ?
+2025-10-28 21:24:47,656 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.235s]
+2025-10-28 21:24:47,657 - elasticsearch_manager - INFO - Found 10 results for query: which family of drugs does gravol belong to ?
+2025-10-28 21:24:47,657 - rag_pipeline - INFO - Answering question: which family of drugs does gravol belong to ?
+2025-10-28 21:24:47,660 - rag_pipeline - INFO - Question type detection - Contra: False, MOA: False, Indication: False, Dosage: False, Side effects: False, Interactions: False, Storage: False, General: False
+2025-10-28 22:08:14,079 - src.medical_rag_system - INFO - Initializing Medical RAG System
+2025-10-28 22:08:14,628 - embedding_manager - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-28 22:08:18,009 - embedding_manager - INFO - Loaded FAISS index with 4847 vectors
+2025-10-28 22:08:18,023 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.013s]
+2025-10-28 22:08:18,023 - elasticsearch_manager - INFO - ElasticSearch cluster: docker-cluster
+2025-10-28 22:08:18,023 - elasticsearch_manager - INFO - Connected to ElasticSearch at localhost:9200
+2025-10-28 22:08:18,024 - rag_pipeline - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-28 22:08:20,211 - rag_pipeline - INFO - PubMedBERT model loaded successfully
+2025-10-28 22:08:20,211 - rag_pipeline - INFO - Loading QA model: ktrapeznikov/biobert_v1.1_pubmed_squad_v2
+2025-10-28 22:08:21,671 - rag_pipeline - INFO - QA model loaded successfully
+2025-10-28 22:08:21,672 - src.medical_rag_system - INFO - Medical RAG System initialized successfully
+2025-10-28 22:08:21,673 - src.medical_rag_system - INFO - Answering question: Who manufactures GRAVOL?
+2025-10-28 22:08:21,673 - src.medical_rag_system - INFO - Searching for: Who manufactures GRAVOL?
+2025-10-28 22:08:21,673 - embedding_manager - INFO - Generating embeddings for 1 texts
+2025-10-28 22:08:23,364 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.440s]
+2025-10-28 22:08:23,365 - elasticsearch_manager - INFO - Found 20 results for query: Who manufactures GRAVOL?
+2025-10-28 22:08:23,527 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.161s]
+2025-10-28 22:08:23,530 - elasticsearch_manager - INFO - Found 10 results for query: Who manufactures GRAVOL?
+2025-10-28 22:08:23,530 - rag_pipeline - INFO - Answering question: Who manufactures GRAVOL?
+2025-10-28 22:08:23,538 - rag_pipeline - INFO - Question type detection - Contra: False, MOA: False, Indication: False, Dosage: False, Side effects: False, Interactions: False, Storage: False, General: False
+2025-10-28 22:24:09,887 - src.medical_rag_system - INFO - Initializing Medical RAG System
+2025-10-28 22:24:10,336 - embedding_manager - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-28 22:24:12,508 - embedding_manager - INFO - Loaded FAISS index with 4847 vectors
+2025-10-28 22:24:12,519 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.010s]
+2025-10-28 22:24:12,519 - elasticsearch_manager - INFO - ElasticSearch cluster: docker-cluster
+2025-10-28 22:24:12,522 - elasticsearch_manager - INFO - Connected to ElasticSearch at localhost:9200
+2025-10-28 22:24:12,522 - rag_pipeline - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-28 22:24:15,140 - rag_pipeline - INFO - PubMedBERT model loaded successfully
+2025-10-28 22:24:15,140 - rag_pipeline - INFO - Loading QA model: ktrapeznikov/biobert_v1.1_pubmed_squad_v2
+2025-10-28 22:24:16,026 - rag_pipeline - INFO - QA model loaded successfully
+2025-10-28 22:24:16,026 - src.medical_rag_system - INFO - Medical RAG System initialized successfully
+2025-10-28 22:24:16,026 - src.medical_rag_system - INFO - Answering question: At what age is GRAVOL not recommended for children?
+2025-10-28 22:24:16,026 - src.medical_rag_system - INFO - Searching for: At what age is GRAVOL not recommended for children?
+2025-10-28 22:24:16,026 - embedding_manager - INFO - Generating embeddings for 1 texts
+2025-10-28 22:24:16,843 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.459s]
+2025-10-28 22:24:16,843 - elasticsearch_manager - INFO - Found 20 results for query: At what age is GRAVOL not recommended for children?
+2025-10-28 22:24:17,047 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.204s]
+2025-10-28 22:24:17,047 - elasticsearch_manager - INFO - Found 10 results for query: At what age is GRAVOL not recommended for children?
+2025-10-28 22:24:17,047 - rag_pipeline - INFO - Answering question: At what age is GRAVOL not recommended for children?
+2025-10-28 22:24:17,049 - rag_pipeline - INFO - Question type detection - Contra: True, MOA: False, Indication: False, Dosage: False, Side effects: False, Interactions: False, Storage: False, General: False
+2025-10-28 22:25:30,819 - src.medical_rag_system - INFO - Initializing Medical RAG System
+2025-10-28 22:25:31,264 - embedding_manager - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-28 22:25:33,758 - embedding_manager - INFO - Loaded FAISS index with 4847 vectors
+2025-10-28 22:25:33,775 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.017s]
+2025-10-28 22:25:33,775 - elasticsearch_manager - INFO - ElasticSearch cluster: docker-cluster
+2025-10-28 22:25:33,775 - elasticsearch_manager - INFO - Connected to ElasticSearch at localhost:9200
+2025-10-28 22:25:33,776 - rag_pipeline - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-28 22:25:36,388 - rag_pipeline - INFO - PubMedBERT model loaded successfully
+2025-10-28 22:25:36,388 - rag_pipeline - INFO - Loading QA model: ktrapeznikov/biobert_v1.1_pubmed_squad_v2
+2025-10-28 22:25:37,254 - rag_pipeline - INFO - QA model loaded successfully
+2025-10-28 22:25:37,254 - src.medical_rag_system - INFO - Medical RAG System initialized successfully
+2025-10-28 22:25:37,256 - src.medical_rag_system - INFO - Answering question: What symptoms is GRAVOL used to prevent or relieve?
+2025-10-28 22:25:37,256 - src.medical_rag_system - INFO - Searching for: What symptoms is GRAVOL used to prevent or relieve?
+2025-10-28 22:25:37,256 - embedding_manager - INFO - Generating embeddings for 1 texts
+2025-10-28 22:25:38,074 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.466s]
+2025-10-28 22:25:38,074 - elasticsearch_manager - INFO - Found 20 results for query: What symptoms is GRAVOL used to prevent or relieve?
+2025-10-28 22:25:38,281 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.206s]
+2025-10-28 22:25:38,281 - elasticsearch_manager - INFO - Found 10 results for query: What symptoms is GRAVOL used to prevent or relieve?
+2025-10-28 22:25:38,281 - rag_pipeline - INFO - Answering question: What symptoms is GRAVOL used to prevent or relieve?
+2025-10-28 22:25:38,281 - rag_pipeline - INFO - Question type detection - Contra: False, MOA: False, Indication: True, Dosage: False, Side effects: True, Interactions: False, Storage: False, General: False
+2025-10-28 22:27:40,404 - src.medical_rag_system - INFO - Initializing Medical RAG System
+2025-10-28 22:27:41,071 - embedding_manager - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-28 22:27:43,380 - embedding_manager - INFO - Loaded FAISS index with 4847 vectors
+2025-10-28 22:27:43,400 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.018s]
+2025-10-28 22:27:43,400 - elasticsearch_manager - INFO - ElasticSearch cluster: docker-cluster
+2025-10-28 22:27:43,400 - elasticsearch_manager - INFO - Connected to ElasticSearch at localhost:9200
+2025-10-28 22:27:43,400 - rag_pipeline - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-28 22:27:45,473 - rag_pipeline - INFO - PubMedBERT model loaded successfully
+2025-10-28 22:27:45,473 - rag_pipeline - INFO - Loading QA model: ktrapeznikov/biobert_v1.1_pubmed_squad_v2
+2025-10-28 22:27:46,380 - rag_pipeline - INFO - QA model loaded successfully
+2025-10-28 22:27:46,380 - src.medical_rag_system - INFO - Medical RAG System initialized successfully
+2025-10-28 22:27:46,380 - src.medical_rag_system - INFO - Answering question: Why should GRAVOL not be used with monoamine oxidase inhibitors (MAOIs)?
+2025-10-28 22:27:46,381 - src.medical_rag_system - INFO - Searching for: Why should GRAVOL not be used with monoamine oxidase inhibitors (MAOIs)?
+2025-10-28 22:27:46,381 - embedding_manager - INFO - Generating embeddings for 1 texts
+2025-10-28 22:27:47,433 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.610s]
+2025-10-28 22:27:47,433 - elasticsearch_manager - INFO - Found 20 results for query: Why should GRAVOL not be used with monoamine oxidase inhibitors (MAOIs)?
+2025-10-28 22:27:47,685 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.251s]
+2025-10-28 22:27:47,686 - elasticsearch_manager - INFO - Found 10 results for query: Why should GRAVOL not be used with monoamine oxidase inhibitors (MAOIs)?
+2025-10-28 22:27:47,686 - rag_pipeline - INFO - Answering question: Why should GRAVOL not be used with monoamine oxidase inhibitors (MAOIs)?
+2025-10-28 22:27:47,690 - rag_pipeline - INFO - Question type detection - Contra: False, MOA: False, Indication: False, Dosage: False, Side effects: False, Interactions: False, Storage: False, General: False
+2025-10-28 22:29:16,820 - src.medical_rag_system - INFO - Initializing Medical RAG System
+2025-10-28 22:29:17,383 - embedding_manager - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-28 22:29:19,898 - embedding_manager - INFO - Loaded FAISS index with 4847 vectors
+2025-10-28 22:29:19,930 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.030s]
+2025-10-28 22:29:19,935 - elasticsearch_manager - INFO - ElasticSearch cluster: docker-cluster
+2025-10-28 22:29:19,937 - elasticsearch_manager - INFO - Connected to ElasticSearch at localhost:9200
+2025-10-28 22:29:19,939 - rag_pipeline - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-28 22:29:22,210 - rag_pipeline - INFO - PubMedBERT model loaded successfully
+2025-10-28 22:29:22,212 - rag_pipeline - INFO - Loading QA model: ktrapeznikov/biobert_v1.1_pubmed_squad_v2
+2025-10-28 22:29:23,165 - rag_pipeline - INFO - QA model loaded successfully
+2025-10-28 22:29:23,166 - src.medical_rag_system - INFO - Medical RAG System initialized successfully
+2025-10-28 22:29:23,166 - src.medical_rag_system - INFO - Answering question: What are the risks of using GRAVOL for a prolonged period?
+2025-10-28 22:29:23,167 - src.medical_rag_system - INFO - Searching for: What are the risks of using GRAVOL for a prolonged period?
+2025-10-28 22:29:23,167 - embedding_manager - INFO - Generating embeddings for 1 texts
+2025-10-28 22:29:24,172 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.361s]
+2025-10-28 22:29:24,172 - elasticsearch_manager - INFO - Found 20 results for query: What are the risks of using GRAVOL for a prolonged period?
+2025-10-28 22:29:24,352 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.180s]
+2025-10-28 22:29:24,354 - elasticsearch_manager - INFO - Found 10 results for query: What are the risks of using GRAVOL for a prolonged period?
+2025-10-28 22:29:24,354 - rag_pipeline - INFO - Answering question: What are the risks of using GRAVOL for a prolonged period?
+2025-10-28 22:29:24,358 - rag_pipeline - INFO - Question type detection - Contra: False, MOA: False, Indication: False, Dosage: False, Side effects: False, Interactions: False, Storage: False, General: False
+2025-10-28 23:27:22,567 - src.medical_rag_system - INFO - Initializing Medical RAG System
+2025-10-28 23:27:23,468 - embedding_manager - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-28 23:27:25,894 - embedding_manager - INFO - Loaded FAISS index with 4847 vectors
+2025-10-28 23:27:25,919 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.025s]
+2025-10-28 23:27:25,919 - elasticsearch_manager - INFO - ElasticSearch cluster: docker-cluster
+2025-10-28 23:27:25,919 - elasticsearch_manager - INFO - Connected to ElasticSearch at localhost:9200
+2025-10-28 23:27:25,919 - rag_pipeline - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-28 23:27:28,780 - rag_pipeline - INFO - PubMedBERT model loaded successfully
+2025-10-28 23:27:28,780 - rag_pipeline - INFO - Loading QA model: ktrapeznikov/biobert_v1.1_pubmed_squad_v2
+2025-10-28 23:27:30,142 - rag_pipeline - INFO - QA model loaded successfully
+2025-10-28 23:27:30,142 - src.medical_rag_system - INFO - Medical RAG System initialized successfully
+2025-10-28 23:27:30,143 - src.medical_rag_system - INFO - Answering question: Which formulation of GRAVOL contains aspartame, and what precaution does this require?
+2025-10-28 23:27:30,143 - src.medical_rag_system - INFO - Searching for: Which formulation of GRAVOL contains aspartame, and what precaution does this require?
+2025-10-28 23:27:30,143 - embedding_manager - INFO - Generating embeddings for 1 texts
+2025-10-28 23:27:31,993 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.696s]
+2025-10-28 23:27:31,993 - elasticsearch_manager - INFO - Found 20 results for query: Which formulation of GRAVOL contains aspartame, and what precaution does this require?
+2025-10-28 23:27:32,289 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.296s]
+2025-10-28 23:27:32,291 - elasticsearch_manager - INFO - Found 10 results for query: Which formulation of GRAVOL contains aspartame, and what precaution does this require?
+2025-10-28 23:27:32,292 - rag_pipeline - INFO - Answering question: Which formulation of GRAVOL contains aspartame, and what precaution does this require?
+2025-10-28 23:27:32,300 - rag_pipeline - INFO - Question type detection - Contra: True, MOA: False, Indication: False, Dosage: False, Side effects: False, Interactions: False, Storage: False, General: False
+2025-10-28 23:33:35,136 - src.medical_rag_system - INFO - Initializing Medical RAG System
+2025-10-28 23:33:35,671 - embedding_manager - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-28 23:33:37,955 - embedding_manager - INFO - Loaded FAISS index with 4847 vectors
+2025-10-28 23:33:37,980 - elastic_transport.transport - INFO - GET http://localhost:9200/ [status:200 duration:0.023s]
+2025-10-28 23:33:37,981 - elasticsearch_manager - INFO - ElasticSearch cluster: docker-cluster
+2025-10-28 23:33:37,982 - elasticsearch_manager - INFO - Connected to ElasticSearch at localhost:9200
+2025-10-28 23:33:37,982 - rag_pipeline - INFO - Loading PubMedBERT model: microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext
+2025-10-28 23:33:40,928 - rag_pipeline - INFO - PubMedBERT model loaded successfully
+2025-10-28 23:33:40,930 - rag_pipeline - INFO - Loading QA model: ktrapeznikov/biobert_v1.1_pubmed_squad_v2
+2025-10-28 23:33:42,110 - rag_pipeline - INFO - QA model loaded successfully
+2025-10-28 23:33:42,115 - src.medical_rag_system - INFO - Medical RAG System initialized successfully
+2025-10-28 23:33:42,125 - src.medical_rag_system - INFO - Answering question: Under what circumstances can GRAVOL IM be given intravenously, and what dilution is required?
+2025-10-28 23:33:42,128 - src.medical_rag_system - INFO - Searching for: Under what circumstances can GRAVOL IM be given intravenously, and what dilution is required?
+2025-10-28 23:33:42,174 - embedding_manager - INFO - Generating embeddings for 1 texts
+2025-10-28 23:33:43,899 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.654s]
+2025-10-28 23:33:43,900 - elasticsearch_manager - INFO - Found 20 results for query: Under what circumstances can GRAVOL IM be given intravenously, and what dilution is required?
+2025-10-28 23:33:44,204 - elastic_transport.transport - INFO - POST http://localhost:9200/medical_documents/_search [status:200 duration:0.304s]
+2025-10-28 23:33:44,206 - elasticsearch_manager - INFO - Found 10 results for query: Under what circumstances can GRAVOL IM be given intravenously, and what dilution is required?
+2025-10-28 23:33:44,206 - rag_pipeline - INFO - Answering question: Under what circumstances can GRAVOL IM be given intravenously, and what dilution is required?
+2025-10-28 23:33:44,214 - rag_pipeline - INFO - Question type detection - Contra: False, MOA: False, Indication: False, Dosage: False, Side effects: False, Interactions: False, Storage: False, General: False
